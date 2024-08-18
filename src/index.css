@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #503280;
+background-image: url("https://www.transparenttextures.com/patterns/graphy.png");
 }
 
 code {
