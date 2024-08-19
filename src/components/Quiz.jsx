@@ -32,7 +32,7 @@ function Quiz(){
             
         }
         else{
-            document.querySelector('button[name=${req}]').style.backgroundColor="green";
+            //document.querySelector('button[name=${req}]').style.backgroundColor="green";?
            console.log(req);
         }
         setQuesCount(currentQues + 1);
