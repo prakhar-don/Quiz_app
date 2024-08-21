@@ -28,31 +28,48 @@ function Quiz(){
     const CorrectAnswer=()=>{
         var req =ques[currentQues].answer;
         if(optionChoosen === ques[currentQues].answer){
+            document.querySelector(`button[name=${req}]`).style.backgroundColor="green";
             setScore(score + 1);
             
         }
         else{
-            //document.querySelector('button[name=${req}]').style.backgroundColor="green";?
+            document.querySelector(`button[name=${req}]`).style.backgroundColor="green";
            console.log(req);
         }
-        setQuesCount(currentQues + 1);
-        boxes.map((val)=>{
+        setTimeout(()=>{
+            setQuesCount(currentQues+1);
+            boxes.map((val)=>{
+                val.current.style.backgroundColor="white";
+            })
+
+        },"1000");
+        
+       /* boxes.map((val)=>{
             val.current.style.backgroundColor="white";
-        })
+        }) */
     }
 
     const EndQuiz=()=>{
         var req =ques[currentQues].answer;
         if(optionChoosen === ques[currentQues].answer){
+            document.querySelector(`button[name=${req}]`).style.backgroundColor="green";
+
             setScore(score + 1);
         }
         else{
+            document.querySelector(`button[name=${req}]`).style.backgroundColor="green";
             console.log(req);
         }
+
+        setTimeout(()=>{
         boxes.map((val)=>{
             val.current.style.backgroundColor="white";
-        setGame("finished")
-        })
+        });
+
+
+        setGame("finished");
+        },"1000")
+        
     }
     return(
         <div className="quiz">
